@@ -356,7 +356,7 @@ extern "C" void* ThreadStats(void*) {
   } while(1);
 }
 
-static const string mainnet_seeds[] = {"seeder.pzdc.org", "seed.pizdec.io", "144.202.111.96"};
+static const string mainnet_seeds[] = {"seeder.pzdc.org", "seed.pizdec.io", ""};
 static const string testnet_seeds[] = {"static-testnet-seeder.pzdc.org", "", ""};
 static const string *seeds = mainnet_seeds;
 
