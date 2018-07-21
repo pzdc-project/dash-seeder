@@ -356,13 +356,14 @@ extern "C" void* ThreadStats(void*) {
   } while(1);
 }
 
-static const string mainnet_seeds[] = {"seeder.pzdc.org", "seed.pizdec.io", ""};
+static const string mainnet_seeds[] = {"seed.pzdc.org", "seed.pzdc.icu", ""};
 static const string testnet_seeds[] = {"static-testnet-seeder.pzdc.org", "", ""};
 static const string *seeds = mainnet_seeds;
 
 extern "C" void* ThreadSeeder(void*) {
   if (!fTestNet){
-    db.Add(CService("seeder.pzdc.org", 21212), true);
+    db.Add(CService("seed.pzdc.org", 21212), true);
+    db.Add(CService("seed.pzdc.icu", 21212), true);
   }
   do {
     for (int i=0; seeds[i] != ""; i++) {
